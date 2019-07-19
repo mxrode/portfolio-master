@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<link rel="stylesheet" href="fontello/css/fontello.css" type="text/css"/>
+		
+		<script>
+			function odliczanie()
+		{
+			var dzisiaj = new Date();
+			
+			var godzina = dzisiaj.getHours();
+			if (godzina<10) godzina = "0"+godzina;
+			
+			var minuta = dzisiaj.getMinutes();
+			if (minuta<10) minuta = "0"+minuta;
+			
+			var sekunda = dzisiaj.getSeconds();
+			if (sekunda<10) sekunda = "0"+sekunda;
+			
+			document.getElementById("zegar").innerHTML = 
+			 godzina+":"+minuta+":"+sekunda;
+			 
+			 setTimeout("odliczanie()",1000);
+		}
+		</script>
+		
+	</head>
+
+	<body onload="odliczanie();">
+	
+	    <div class="wrapper">
+			<div id="topbar">
+				<div id="dane">Jakub Kolewczyński</div>
+				<div id="zegar"></div> 
+				<div style="clear:both;"></div>
+			</div>
+			<div id="nav">
+				<div class="box" id="box1" style="background-color: #359BDD;"><a href="index.html"><i class="icon-user"></i><br />Kim jestem?</a></div>
+				<div class="box" id="box2"><a href="corobie.html"><i class="icon-laptop"></i><br />Co robię?</a></div>
+				<div class="box" id="box3"><a href="cv.html"><i class="icon-graduation-cap"></i><br />Curriculum vitae</a></div>
+				<div class="box" id="box4"><a href="kontakt.html"><i class="icon-mail"></i><br />Kontakt</a></div>
+				<div style="clear:both"></div>
+			</div>
+			<div id="container">
+				<div id="content">
+					
+					<h1>Kim jestem?</h1> 
+					
+					<p style="text-indent: 5%;">Moją pasją jest informatyka, a w szególności tworzenie stron internetowych. Posiadam podstawową wiedzę w językach front-end'owych takich jak HTML5 czy CSS. Wykonałem wiele projektów, które pozwoliły mi nauczyć się stosować przyswojoną wiedzę w praktyce. Do powierzonego zlecenia podchodzę rzetelnie i z entuzjazmem. Chętnie poszerzę swoje umiejętności poprzez tworzenie kolejnych projektów.</p>
+
+				
+				</div>
+				<div id="rnav">
+					<div class="box" id="boxfb"><a href="https://www.facebook.com/kuba.kolewczynski" target="_blank"><i class="icon-facebook-squared"></i></a></div>
+					<div  id="boxmotto"><i>"Talk is cheap. Show me the code!"</i><br />- Linus Torvalds, twórca Linuxa</div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>	
+			
+		</div>
+		<div id="footer">
+			2018 &copy Jakub Kolewczyński - Portfolio. Programista webowy zaprasza do współpracy <a href="mailto:jakub.kolewczynski@gmail.com"<i class="icon-mail-alt"></i>jakub.kolewczynski@gmail.com</a>
+		</div>
+	
+	</body>
+</html>
